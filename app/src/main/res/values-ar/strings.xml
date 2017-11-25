@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">اسئلة ذكاء</string>
+    <string name="question1_title">السؤال الأول</string>
+    <string name="question2_title">السؤال الثانى</string>
+    <string name="question3_title">السؤال الثالث</string>
+    <string name="question4_title">السؤال الرابع</string>
+    <string name="question5_title">السؤال الخامس</string>
+    <string name="question6_title">السؤال السادس</string>
+    <string name="question7_title">السؤال السابع</string>
+    <string name="question8_title">السؤال الثامن</string>
+    <string name="submit">إرسال</string>
+    <string name="reset">إعاده</string>
+    <string name="question1">
+        اكتب الرقم الذى يلى فى هذه المتسلسله \n
+ 37, 34, 31, 28
+    </string>
+    <string name="question2">ما هو اول حيوان يصل الى القمر</string>
+    <string name="question3">
+        إذا كانت مارى تبلغ من العمر 60 عاما \n
+        فعمرهاهذا يكون اربع اضعاف عمر اخيها فكم \n
+        تبلغ من العمر حتى يكون عمرها ضعف عمر اخيها
+    </string>
+    <string name="answer1_question3">20</string>
+    <string name="answer2_question3">24</string>
+    <string name="answer3_question3">25</string>
+    <string name="answer4_question3">28</string>
+    <string name="question4">
+        اكتب الرقم الذى يلى فى هذه المتسلسله \n
+        1 - 1 - 2 - 3 - 5 - 8 - 13
+    </string>
+    <string name="answer1_question4">8</string>
+    <string name="answer2_question4">13</string>
+    <string name="answer3_question4">21</string>
+    <string name="answer4_question4">26</string>
+    <string name="question5">ما المختلف فى هذه الحيوانات؟</string>
+    <string name="answer1_question5">كلب</string>
+    <string name="answer2_question5">قطه</string>
+    <string name="answer3_question5">أسد</string>
+    <string name="answer4_question5">أفعى</string>
+    <string name="question6">
+        ما الرقم الذى يحقق هذه المعادله بطريقه صحيحه \n
+        8:4 as 10:
+    </string>
+    <string name="answer1_question6">3</string>
+    <string name="answer2_question6">7</string>
+    <string name="answer3_question6">24</string>
+    <string name="answer4_question6">5</string>
+    <string name="question7">اى هذه الحروف يمكن ترتيبه ليكون كلمة من خمس حروف</string>
+    <string name="answer2_question7">ي ل س ق ف</string>
+    <string name="answer1_question7">م ا ط م ط</string>
+    <string name="answer3_question7">ق ر ب ق و</string>
+    <string name="answer4_question7">ب ق ف غ ع</string>
+    <string name="question8">اى من هذه الاختيارات يعد من الفواكه؟</string>
+    <string name="answer1_question8">موز</string>
+    <string name="answer2_question8">برتقال</string>
+    <string name="answer3_question8">بطاطس</string>
+    <string name="answer4_question8">خيار</string>
+</resources>

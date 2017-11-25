@@ -437,7 +437,7 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="16dp"
                 android:background="#009933"
-                android:onClick="submitAnswers"
+                android:onClick="submitUserAnswers"
                 android:text="@string/submit" />
 
             <Button
@@ -447,7 +447,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_toRightOf="@id/submit"
                 android:background="#009933"
-                android:onClick="resetAnswers"
+                android:onClick="reset"
                 android:text="@string/reset" />
 
         </RelativeLayout>

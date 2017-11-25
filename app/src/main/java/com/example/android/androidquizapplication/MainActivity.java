@@ -2,6 +2,7 @@ package com.example.android.androidquizapplication;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.RadioButton;
@@ -117,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
      * check user answer and show result
      * @param view view
      */
-    public void submitAnswers(View view)
+    public void submitUserAnswers(View view)
     {
         // get first editView which contain first question answer
         TextView firstEditView     = (TextView) findViewById(R.id.first_question_answer);
@@ -173,34 +174,35 @@ public class MainActivity extends AppCompatActivity {
                                 !isCheckBoxGroup2Answer4Checked )
                 ) {
             Toast.makeText(this,"Please Make Sure that You answer all questions",Toast.LENGTH_SHORT).show();
+        } else {
+            // check if answers in edit views is correct and update user degree
+            addDegreeForCorrectTextViewAnswer(1, firstQuestionAnswer);
+            addDegreeForCorrectTextViewAnswer(2, secondQuestionAnswer);
+            // check if answers in radio group views is correct and update user degree
+            addDegreesForCorrectRadioButtonAnswer(3, thirdQuestionAnswer);
+            addDegreesForCorrectRadioButtonAnswer(4, fourthQuestionAnswer);
+            addDegreesForCorrectRadioButtonAnswer(5, fifthQuestionAnswer);
+            addDegreesForCorrectRadioButtonAnswer(6, sixQuestionAnswer);
+            // check if answers in edit views is correct and update user degree
+            addDegreesForCorrectCheckBoxesAnswer(7,
+                    isCheckBoxGroup1Answer1Checked,
+                    isCheckBoxGroup1Answer2Checked,
+                    isCheckBoxGroup1Answer3Checked,
+                    isCheckBoxGroup1Answer4Checked);
+            addDegreesForCorrectCheckBoxesAnswer(7,
+                    isCheckBoxGroup2Answer1Checked,
+                    isCheckBoxGroup2Answer2Checked,
+                    isCheckBoxGroup2Answer3Checked,
+                    isCheckBoxGroup2Answer4Checked);
+            displaySuccessRatio();
         }
-        // check if answers in edit views is correct and update user degree
-        addDegreeForCorrectTextViewAnswer(1, firstQuestionAnswer);
-        addDegreeForCorrectTextViewAnswer(2, secondQuestionAnswer);
-        // check if answers in radio group views is correct and update user degree
-        addDegreesForCorrectRadioButtonAnswer(3, thirdQuestionAnswer);
-        addDegreesForCorrectRadioButtonAnswer(4, fourthQuestionAnswer);
-        addDegreesForCorrectRadioButtonAnswer(5, fifthQuestionAnswer);
-        addDegreesForCorrectRadioButtonAnswer(6, sixQuestionAnswer);
-        // check if answers in edit views is correct and update user degree
-        addDegreesForCorrectCheckBoxesAnswer(7,
-                isCheckBoxGroup1Answer1Checked,
-                isCheckBoxGroup1Answer2Checked,
-                isCheckBoxGroup1Answer3Checked,
-                isCheckBoxGroup1Answer4Checked);
-        addDegreesForCorrectCheckBoxesAnswer(7,
-                isCheckBoxGroup2Answer1Checked,
-                isCheckBoxGroup2Answer2Checked,
-                isCheckBoxGroup2Answer3Checked,
-                isCheckBoxGroup2Answer4Checked);
-        displaySuccessRatio();
     }
 
     /**
      * empty all views
      * @param view view
      */
-    public void resetAnswers(View view)
+    public void reset(View view)
     {
         // empty edit text views
         TextView firstEditView  = (TextView) findViewById(R.id.first_question_answer);

@@ -1,0 +1,115 @@
+<resources>
+    <string name="app_name">androidQuizApplication</string>
+    <string name="question1_title">Question 1</string>
+    <string name="question2_title">Question 2</string>
+    <string name="question3_title">Question 3</string>
+    <string name="question4_title">Question 4</string>
+    <string name="question5_title">Question 5</string>
+    <string name="question6_title">Question 6</string>
+    <string name="question7_title">Question 7</string>
+    <string name="question8_title">Question 8</string>
+    <string name="submit">Submit</string>
+    <string name="reset">Reset</string>
+    <string name="question1">
+         Which number should come next in the pattern? \n
+         37, 34, 31, 28
+    </string>
+    <string name="question2">
+        What animal first reached Earth orbits alive?
+    </string>
+    <string name="question3">
+        Mary, who is sixteen years old, is four times \n
+        as old as her brother. How old will Mary be \n
+        when she is twice as old as her brother?
+    </string>
+    <string name="answer1_question3">
+        20
+    </string>
+    <string name="answer2_question3">
+        24
+    </string>
+    <string name="answer3_question3">
+        25
+    </string>
+    <string name="answer4_question3">
+        28
+    </string>
+    <string name="question4">
+        Which number should come next in the series? \n
+        1 - 1 - 2 - 3 - 5 - 8 - 13
+    </string>
+    <string name="answer1_question4">
+         8
+    </string>
+    <string name="answer2_question4">
+        13
+    </string>
+    <string name="answer3_question4">
+        21
+    </string>
+    <string name="answer4_question4">
+        26
+    </string>
+    <string name="question5">
+        Which one of the five is least like the other four?
+    </string>
+    <string name="answer1_question5">
+        Dog
+    </string>
+    <string name="answer2_question5">
+        Cat
+    </string>
+    <string name="answer3_question5">
+        Lion
+    </string>
+    <string name="answer4_question5">
+        Boa
+    </string>
+    <string name="question6">
+        What number best completes the analogy: \n
+        8:4 as 10:
+    </string>
+    <string name="answer1_question6">
+         3
+    </string>
+    <string name="answer2_question6">
+        7
+    </string>
+    <string name="answer3_question6">
+        24
+    </string>
+    <string name="answer4_question6">
+        5
+    </string>
+    <string name="question7">
+        Which of the following can be arranged into \n
+        a 5-letter English word?
+    </string>
+    <string name="answer1_question7">
+         a. H R G S T
+    </string>
+    <string name="answer2_question7">
+        b. R I L S A
+    </string>
+    <string name="answer3_question7">
+        c. T O O M T
+    </string>
+    <string name="answer4_question7">
+        d. W Q R G S
+    </string>
+    <string name="question8">
+        Which of the following choices are considered as fruit?
+    </string>
+    <string name="answer1_question8">
+         a. banana
+    </string>
+    <string name="answer2_question8">
+        b. Orange
+    </string>
+    <string name="answer3_question8">
+        c. Potato
+    </string>
+    <string name="answer4_question8">
+        d. Cucumber
+    </string>
+</resources>

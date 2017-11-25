@@ -104,10 +104,9 @@ public class MainActivity extends AppCompatActivity {
      */
     private void displaySuccessRatio()
     {
-        int userSuccessRatio = (totalDegree / 100) * 100;
-        if (userSuccessRatio > 50) {
+        if (totalDegree > 50) {
             Toast.makeText(this,
-                    "Congratulation you are success \n Your success ratio : " + userSuccessRatio,
+                    "Congratulation you are success \n Your success ratio : " + totalDegree,
                     Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(this,"Sorry You don't pass the quiz try again",Toast.LENGTH_SHORT).show();

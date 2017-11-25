@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">androidQuizApplication</string>
     <string name="question1_title">Question 1</string>
     <string name="question2_title">Question 2</string>
@@ -111,5 +111,15 @@
     </string>
     <string name="answer4_question8">
         d. Cucumber
+    </string>
+    <string name="notCompletedAnswers">
+        Please Make Sure that You answer all questions
+    </string>
+    <string name="failedInQuiz">
+        Sorry You don\'t pass the quiz try again
+    </string>
+    <string name="passQuiz">
+        Congratulation you are success \n Your success degree :
+         <xliff:g id="userDegree">%d</xliff:g>
     </string>
 </resources>

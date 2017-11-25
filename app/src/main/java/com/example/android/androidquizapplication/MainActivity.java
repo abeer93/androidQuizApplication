@@ -84,16 +84,20 @@ public class MainActivity extends AppCompatActivity {
     ) {
         if (QuestionNumber == 7) {
             if (isSecondCheckBoxChecked) {
+                Log.i("Main Activity", "question 7 answer 1");
                 totalDegree += 10;
             }
             if (isThirdCheckBoxChecked) {
+                Log.i("Main Activity", "question 7 answer 2");
                 totalDegree += 10;
             }
         } else if (QuestionNumber == 8) {
-            if (isSecondCheckBoxChecked) {
+            if (isFirstCheckBoxChecked) {
+                Log.i("Main Activity", "question 8 answer 1");
                 totalDegree += 10;
             }
-            if (isFirstCheckBoxChecked) {
+            if (isSecondCheckBoxChecked) {
+                Log.i("Main Activity", "question 8 answer 2");
                 totalDegree += 10;
             }
         }
@@ -106,10 +110,10 @@ public class MainActivity extends AppCompatActivity {
     {
         if (totalDegree > 50) {
             Toast.makeText(this,
-                    "Congratulation you are success \n Your success ratio : " + totalDegree,
+                    getString(R.string.passQuiz, totalDegree),
                     Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(this,"Sorry You don't pass the quiz try again",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,getString(R.string.failedInQuiz),Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -119,6 +123,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void submitUserAnswers(View view)
     {
+        totalDegree = 0;
         // get first editView which contain first question answer
         TextView firstEditView     = (TextView) findViewById(R.id.first_question_answer);
         String firstQuestionAnswer =  firstEditView.getText().toString();
@@ -172,7 +177,7 @@ public class MainActivity extends AppCompatActivity {
                                 !isCheckBoxGroup2Answer3Checked &&
                                 !isCheckBoxGroup2Answer4Checked )
                 ) {
-            Toast.makeText(this,"Please Make Sure that You answer all questions",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,getString(R.string.notCompletedAnswers),Toast.LENGTH_SHORT).show();
         } else {
             // check if answers in edit views is correct and update user degree
             addDegreeForCorrectTextViewAnswer(1, firstQuestionAnswer);
@@ -188,7 +193,7 @@ public class MainActivity extends AppCompatActivity {
                     isCheckBoxGroup1Answer2Checked,
                     isCheckBoxGroup1Answer3Checked,
                     isCheckBoxGroup1Answer4Checked);
-            addDegreesForCorrectCheckBoxesAnswer(7,
+            addDegreesForCorrectCheckBoxesAnswer(8,
                     isCheckBoxGroup2Answer1Checked,
                     isCheckBoxGroup2Answer2Checked,
                     isCheckBoxGroup2Answer3Checked,
@@ -209,38 +214,14 @@ public class MainActivity extends AppCompatActivity {
         TextView secondEditView = (TextView) findViewById(R.id.second_question_answer);
         secondEditView.setText("");
         // set all radio buttons to false
-        RadioButton radioButton1 = (RadioButton) findViewById(R.id.answer1_radio1);
-        radioButton1.setChecked(false);
-        RadioButton radioButton2 = (RadioButton) findViewById(R.id.answer2_radio1);
-        radioButton2.setChecked(false);
-        RadioButton radioButton3 = (RadioButton) findViewById(R.id.answer3_radio1);
-        radioButton3.setChecked(false);
-        RadioButton radioButton4 = (RadioButton) findViewById(R.id.answer4_radio1);
-        radioButton4.setChecked(false);
-        RadioButton radioButton5 = (RadioButton) findViewById(R.id.answer1_radio2);
-        radioButton5.setChecked(false);
-        RadioButton radioButton6 = (RadioButton) findViewById(R.id.answer2_radio2);
-        radioButton6.setChecked(false);
-        RadioButton radioButton7 = (RadioButton) findViewById(R.id.answer3_radio2);
-        radioButton7.setChecked(false);
-        RadioButton radioButton8 = (RadioButton) findViewById(R.id.answer4_radio2);
-        radioButton8.setChecked(false);
-        RadioButton radioButton9 = (RadioButton) findViewById(R.id.answer1_radio3);
-        radioButton9.setChecked(false);
-        RadioButton radioButton10 = (RadioButton) findViewById(R.id.answer2_radio3);
-        radioButton10.setChecked(false);
-        RadioButton radioButton11 = (RadioButton) findViewById(R.id.answer3_radio3);
-        radioButton11.setChecked(false);
-        RadioButton radioButton12 = (RadioButton) findViewById(R.id.answer4_radio3);
-        radioButton12.setChecked(false);
-        RadioButton radioButton13 = (RadioButton) findViewById(R.id.answer1_radio4);
-        radioButton13.setChecked(false);
-        RadioButton radioButton14 = (RadioButton) findViewById(R.id.answer2_radio4);
-        radioButton14.setChecked(false);
-        RadioButton radioButton15 = (RadioButton) findViewById(R.id.answer3_radio4);
-        radioButton15.setChecked(false);
-        RadioButton radioButton16 = (RadioButton) findViewById(R.id.answer4_radio4);
-        radioButton16.setChecked(false);
+        RadioGroup firstGroup = (RadioGroup) findViewById(R.id.first_radio_group);
+        firstGroup.clearCheck();
+        RadioGroup secondGroup = (RadioGroup) findViewById(R.id.second_radio_group);
+        secondGroup.clearCheck();
+        RadioGroup thirdGroup = (RadioGroup) findViewById(R.id.third_radio_group);
+        thirdGroup.clearCheck();
+        RadioGroup fourthGroup = (RadioGroup) findViewById(R.id.fourth_radio_group);
+        fourthGroup.clearCheck();
         // set all checkbox buttons to false
         CheckBox checkBox1 = (CheckBox) findViewById(R.id.answer1_checkbox_group1);
         checkBox1.setChecked(false);

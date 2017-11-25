@@ -446,6 +446,7 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="16dp"
                 android:layout_toRightOf="@id/submit"
+                android:layout_toEndOf="@+id/submit"
                 android:background="#009933"
                 android:onClick="reset"
                 android:text="@string/reset" />

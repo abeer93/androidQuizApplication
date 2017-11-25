@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">اسئلة ذكاء</string>
     <string name="question1_title">السؤال الأول</string>
     <string name="question2_title">السؤال الثانى</string>
@@ -56,4 +56,15 @@
     <string name="answer2_question8">برتقال</string>
     <string name="answer3_question8">بطاطس</string>
     <string name="answer4_question8">خيار</string>
+    <string name="notCompletedAnswers">
+        من فضلك تأكد منه انه تمت الاجابه على كل الاسئله
+    </string>
+    <string name="failedInQuiz">
+        عذرا.انت لم تجتاز الاسئلة بنجاح حاول مره اخرى
+    </string>
+    <string name="passQuiz">
+        مبروووك انت نجحت \n
+        درجتك :
+         <xliff:g id="userDegree">%d</xliff:g>
+    </string>
 </resources>
